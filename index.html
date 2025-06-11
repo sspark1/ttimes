@@ -1,71 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T타임즈 - 기술, 트렌드, 혁신</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>T타임즈</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">최신뉴스</a></li>
-                    <li><a href="#">기술</a></li>
-                    <li><a href="#">트렌드</a></li>
-                    <li><a href="#">혁신</a></li>
-                    <li><a href="#">T타임즈 TV</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="main-content">
-            <article class="featured-article">
-                <img src="https://via.placeholder.com/800x400" alt="메인 기사 이미지">
-                <h2>AI 시대, 살아남는 인재의 조건</h2>
-                <p>인공지능의 발전은 우리의 일자리를 어떻게 바꾸고 있을까요? T타임즈가 최신 보고서와 전문가 인터뷰를 통해 AI 시대에 필요한 역량과 미래 유망 직업을 심층 분석했습니다.</p>
-                <a href="#" class="read-more">기사 전문 보기</a>
-            </article>
-
-            <section class="article-list">
-                <h3>최신 기사</h3>
-                <div id="article-container">
-                    </div>
-                <button id="load-more">더 보기</button>
-            </section>
-        </section>
-
-        <aside class="sidebar">
-            <div class="subscribe-box">
-                <h3>T타임즈 구독하기</h3>
-                <p>매주 새로운 기술, 트렌드 소식을 이메일로 받아보세요.</p>
-                <form id="subscribe-form">
-                    <input type="email" placeholder="이메일 주소 입력" required>
-                    <button type="submit">구독</button>
-                </form>
-            </div>
-            <div class="popular-articles">
-                <h3>인기 기사</h3>
-                <ul>
-                    <li><a href="#">양자컴퓨팅, 미래를 어떻게 바꿀까?</a></li>
-                    <li><a href="#">2025년 주목해야 할 5가지 기술 트렌드</a></li>
-                    <li><a href="#">플랫폼 경제의 명과 암</a></li>
-                    <li><a href="#">성공하는 스타트업의 비밀</a></li>
-                </ul>
-            </div>
-        </aside>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 T타임즈. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공학용 계산기</title>
+    <script>
+      // 초기 다크 모드 설정 (페이지 로드 시 깜빡임 방지)
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem('theme');
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+        document.documentElement.classList.add('dark-mode');
+      } else {
+        document.documentElement.classList.remove('dark-mode');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
